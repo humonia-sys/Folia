@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: ./gradlew build
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: Folia Artifacts
-          path: build/libs/*.jar
+          path: ./build/libs/*.jar
