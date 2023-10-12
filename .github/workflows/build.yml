@@ -25,7 +25,7 @@ jobs:
       - name: Apply Patches
         run: ./gradlew applyPatches
       - name: Build
-        run: ./gradlew createReobfBundlerJar createReobfPaperclipJar
+        run: ./gradlew createReobfBundlerJar createReobfPaperclipJar createMojmapBundlerJar
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
