@@ -32,14 +32,14 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Folia Artifacts
-          path: ./build/libs/*.jar
+          path: ./Folia-Server/*.jar
       - name: Set outputs
         id: short_sha
         run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
       - name: Publish Release
         uses: softprops/action-gh-release@v1
         with:
-          files: "build/libs/*.jar"
+          files: "./Folia-Server/*.jar"
           body: |
             Commit ${{ steps.short_sha.outputs.sha_short }}
             This release is automatically compiled by GitHub Actions
